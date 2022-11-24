@@ -14,10 +14,12 @@
 # letter_U = "*\t\t*"
 # print(letter_R,letter_U)
 
-line1 = "* * * * *\t"
-line2 = "*\t\t*"
-line3 = ""
-print(line1, line2)
-print(line2)
-print(line1)
+five_stars = "* * * * *\t"
+two_stars_first_last = "*\t\t*\t"
+two_stars_first_second = "* * \t"
+one_star = "*"
+print(five_stars,two_stars_first_last)
+print(two_stars_first_last,two_stars_first_last)
+print(five_stars,two_stars_first_last)
+print(two_stars_first_second)
 
