@@ -16,5 +16,8 @@
 
 line1 = "* * * * *\t"
 line2 = "*\t\t*"
+line3 = ""
 print(line1, line2)
 print(line2)
+print(line1)
+
