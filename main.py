@@ -19,9 +19,13 @@
 
 sssss = "* * * * *\t"
 sxxxs = "*\t\t*\t"
-two_stars_first_second = "* * \t"
+ssxxx = "* * \t\t"
+sxsxx = "*\t *\t\t"
+sxxsx = "*\t  *\t\t"
 one_star = "*"
-print(five_stars, two_stars_first_last)
-print(two_stars_first_last, two_stars_first_last)
-print(five_stars, two_stars_first_last)
-print(two_stars_first_second)
+print(sssss,sxxxs)
+print(sxxxs,sxxxs)
+print(sssss,sxxxs)
+print(ssxxx,sxxxs)
+print(sxsxx,sxxxs)
+print(sxxsx,sssss)
