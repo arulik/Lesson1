@@ -1,4 +1,9 @@
+import antigravity
+print("https://xkcd.com/353/")
 
+import __hello__
+
+print("from __future__ import braces")
 
 
 RUSLAN = "* * * * *\t*\t\t*\t* * * * *\t*\t\t\t\t*\t\t*\t\t*\n*\t\t*\t*\t\t*\t*\t\t\t*\t\t\t   * *\t\t* *\t\t*\n* * * * *\t*\t\t*\t* * * * *\t*\t\t\t" \
