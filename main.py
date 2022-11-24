@@ -14,12 +14,14 @@
 # letter_U = "*\t\t*"
 # print(letter_R,letter_U)
 
-five_stars = "* * * * *\t"
-two_stars_first_last = "*\t\t*\t"
+
+# s = star, x = spase
+
+sssss = "* * * * *\t"
+sxxxs = "*\t\t*\t"
 two_stars_first_second = "* * \t"
 one_star = "*"
-print(five_stars,two_stars_first_last)
-print(two_stars_first_last,two_stars_first_last)
-print(five_stars,two_stars_first_last)
+print(five_stars, two_stars_first_last)
+print(two_stars_first_last, two_stars_first_last)
+print(five_stars, two_stars_first_last)
 print(two_stars_first_second)
-
