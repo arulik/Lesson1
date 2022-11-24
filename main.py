@@ -1,3 +1,5 @@
+
+
 #first_line = "* * * * *\t*\t\t*\t* * * * *\t*\t\t\t\t*\t\t*\t\t*"
 #second_line = '*\t\t*\t*\t\t*\t*\t\t\t*\t\t\t   * *\t\t* *\t\t*'
 #third_line = "* * * * *\t*\t\t*\t* * * * *\t*\t\t\t  *   *\t\t*\t*\t*"
@@ -10,4 +12,7 @@
 #print(fifth_line)
 
 RUSLAN = "* * * * *\t*\t\t*\t* * * * *\t*\t\t\t\t*\t\t*\t\t*\n*\t\t*\t*\t\t*\t*\t\t\t*\t\t\t   * *\t\t* *\t\t*\n* * * * *\t*\t\t*\t* * * * *\t*\t\t\t  *   *\t\t*\t*\t*\n* \t*\t\t*\t\t*\t\t\t*\t*\t\t\t *\t*  *\t*\t  * *\n*\t\t*\t* * * * *\t* * * * *\t* * * * *\t*\t\t*\t*\t    *"
-print(all_lines)
+print(RUSLAN)
+
+
+print("\\a\t\tBell (alert)\n\\b\t\tBackspace\n\\n\t\tNew line\n\\t\t\tHorizontal tab\n\\\ \t\tBackslash \\\n\\\"\t\tDouble quotation mark \"\n\\\'\t\tSingle quotation mark \'")
