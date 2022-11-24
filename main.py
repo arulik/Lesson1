@@ -7,6 +7,6 @@
 
 first_line = "*****\t*\t\t\t*****\t*\t\t*\t\t*\t*\t*"
 second_line = '*\t*\n* *\n*'
-print(first_line,)
+print(first_line)
 print(second_line)
 
