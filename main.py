@@ -11,10 +11,15 @@ print("яблок в корзині: " + str((float(x)-int(x))*b))
 '''
 
 
+a = int(input('a=:'))
+b = int(input('b=:'))
+x = a // b
+y = int(a % b)
 
 
 
-
+print("яблок у кожного школяра: " + str(x))
+print("яблок в корзині: " + str(y))
 
 
 
