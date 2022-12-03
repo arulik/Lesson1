@@ -11,8 +11,8 @@ print("яблок в корзині: " + str((float(x)-int(x))*b))
 '''
 
 
-apple = int(input('apple=:'))
-people = int(input('people=:'))
+apple = int(input('Введіть кількість яблок: '))
+people = int(input('Введіть кількість школярів: '))
 per_people = apple // people
 bag = int(apple % people)
 
