@@ -13,10 +13,12 @@ first_class=int(input('Кількість дітей у першому клас�
 second_class=int(input('Кількість дітей у другому класі: '))
 third_class=int(input('Кількість дітей у третьому класі: '))
 
-x = int((first_class + second_class + third_class) / 2)
-y = first_class + second_class + third_class
+x = int((first_class + second_class + third_class) // 2)
+
+y = (first_class + second_class + third_class) % 2
 print(y)
 print(x)
+print(f'{x+y}')
 
 #print(f'{(first_class + second_class + third_class) / 2}')
 
