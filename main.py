@@ -19,7 +19,7 @@ print(f'Кількість парт для покупки {main_part+secondary_p
 print('*** Інверсія числа ***')
 default_num = input("Введіть ціле число: ")
 inverse_num = default_num[::-1]
-print('Результат:', inverse_num, , end='\n\n')
+print('Результат:', inverse_num, end='\n\n')
 
 
 print('*** Задача для обчислення секунд ***')
