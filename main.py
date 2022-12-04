@@ -1,4 +1,3 @@
-'''
 print('*** Задача про школярів та яблока ***')
 apple = int(input('Введіть кількість яблок: '))
 people = int(input('Введіть кількість школярів: '))
@@ -20,12 +19,14 @@ print(f'Кількість парт для покупки {main_part+secondary_p
 print('*** Інверсія числа ***')
 default_num = input("Введіть ціле число: ")
 inverse_num = default_num[::-1]
-print('Результат:', inverse_num)
-'''
+print('Результат:', inverse_num, , end='\n\n')
 
-#sec = int(input('кількість секунд: '))
-#y = int(sec // 60 // 60)
-#print(y)
-secsec=int(input('sec= '))
-sec_value = secsec % (24 * 3600)
 
+print('*** Задача для обчислення секунд ***')
+sec = int(input('Введіть кількість секунд= '))
+sec_value = sec % (24 * 3600)
+hour_value = sec_value // 3600
+sec_value %= 3600
+min_value = sec_value // 60
+sec_value %= 60
+print(f'{hour_value}:{min_value}:{sec_value}')
