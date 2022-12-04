@@ -1,4 +1,4 @@
-
+'''
 print('*** Задача про школярів та яблока ***')
 apple = int(input('Введіть кількість яблок: '))
 people = int(input('Введіть кількість школярів: '))
@@ -16,6 +16,12 @@ third_class=int(input('Кількість дітей у третьому кла�
 main_part = int((first_class + second_class + third_class) // 2)
 secondary_part = int(first_class + second_class + third_class) % 2
 print(f'Кількість парт для покупки {main_part+secondary_part}')
+'''
+
+print('*** Інверсія числа ***')
+default_num = input("Введіть ціле число: ")
+inverse_num = default_num[::-1]
+print('Результат:', inverse_num)
 
 
 
