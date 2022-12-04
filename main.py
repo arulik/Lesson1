@@ -19,12 +19,10 @@ print(f'Кількість парт для покупки {main_part+secondary_p
 
 first_num = int(input("Введіть число для інверсії: "))
 second_num = 0
-
 while first_num > 0:
     last_num = first_num % 10
     first_num = first_num // 10
     second_num = second_num * 10 + last_num
-
 print('Число після інверсії:', second_num, end='\n\n')
 
 
