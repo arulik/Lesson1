@@ -18,12 +18,11 @@ main_part += int(second_class) // 2
 secondary_part += int(second_class) % 2
 main_part += int(third_class) // 2
 secondary_part += int(third_class) % 2
-
 print(main_part+secondary_part, end='\n\n')
 
 
 print('*** Задача на інверсію ***')
-number=input('Введіть ціле, 3-х значине число: ')
+number=input('Введіть ціле, 3-х значне число: ')
 last_num = int(number) % 10
 remainder_first = int(number) // 10
 second_num = int(remainder_first) % 10
