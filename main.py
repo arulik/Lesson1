@@ -1,4 +1,4 @@
-'''
+
 print('*** Задача про школярів та яблока ***')
 apple = int(input('Введіть кількість яблок: '))
 people = int(input('Введіть кількість школярів: '))
@@ -19,16 +19,17 @@ secondary_part += int(second_class) % 2
 main_part += int(third_class) // 2
 secondary_part += int(third_class) % 2
 
-print(main_part+secondary_part, end=\n\n)
+print(main_part+secondary_part, end='\n\n')
 
 
-first_num = int(input("Введіть число для інверсії: "))
-second_num = 0
-while first_num > 0:
-    last_num = first_num % 10
-    first_num = first_num // 10
-    second_num = second_num * 10 + last_num
-print('Число після інверсії:', second_num, end='\n\n')
+print('*** Задача на інверсію ***')
+number=input('Введіть ціле, 3-х значине число: ')
+last_num = int(number) % 10
+remainder_first = int(number) // 10
+second_num = int(remainder_first) % 10
+remainder_second = int(remainder_first) // 10
+first_num = int(remainder_second) % 10
+print((last_num * 100) + (second_num *10) + first_num, end='\n\n')
 
 
 print('*** Задача для обчислення секунд ***')
@@ -39,12 +40,5 @@ sec_value %= 3600
 min_value = sec_value // 60
 sec_value %= 60
 print(f'{hour_value}:{min_value}:{sec_value}')
-'''
 
-number=input('Введіть ціле, 3-х значине число: ')
-last_num = int(a) % 10
- = int(a) // 10
-second_num = int(b) % 10
-c = int(b) // 10
-first_num = int(c) % 10
-print((last_num * 100) + (second_num *10) + first_num)
+
