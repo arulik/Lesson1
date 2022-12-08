@@ -45,7 +45,7 @@ if last_num < 10 and exception == 11:
     print((f'Маша знайшла у лісі {mushroom} гриб{variable_else}'))
 elif last_num == 1:
     print(f'Маша знайшла у лісі {mushroom} гриб{variable_pass}')
-elif mushroom < 5 and last_num in range(2, 5):
+elif last_num in range(2, 5):
     print(f'Маша знайшла у лісі {mushroom} гриб{variable_range}')
 else:
     print((f'Маша знайшла у лісі {mushroom} гриб{variable_else}'))
