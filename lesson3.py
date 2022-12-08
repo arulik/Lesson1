@@ -25,7 +25,7 @@ for i in range(1, number):
         print(i**2, end=' ')
 '''
 
-number=float(input('select number: '))
+number=float(input('Виберіть число: '))
 if number % 2 != 0:
     print('Просте число')
 elif number == 2:
