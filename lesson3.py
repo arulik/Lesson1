@@ -36,11 +36,11 @@ else:
 print('\n*** Задача про гриби ***')
 mushroom = int(input('Кількість грибів: '))
 last_num = int(mushroom) % 10
-exeption = int(mushroom) % 100
+exception = int(mushroom) % 100
 variable_pass = (' ')
 variable_range = ('а')
 variable_else = ('ів')
-if last_num < 10 and exeption == 11:
+if last_num < 10 and exception == 11:
     print((f'Маша знайшла у лісі {mushroom} гриб{variable_else}'))
 elif last_num == 1:
     print(f'Маша знайшла у лісі {mushroom} гриб{variable_pass}')
