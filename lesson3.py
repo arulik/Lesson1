@@ -37,14 +37,15 @@ else:
 
 mushroom = int(input('Кількість грибів: '))
 last_num = int(mushroom) % 10
+exeption = int(mushroom) % 100
 variable = (' ')
-variable2 = ('а')
+variable2 = ('и')
 variable3 = ('ів')
-if last_num == 1:
+if last_num < 10 and exeption == 11:
+    print((f'Маша нашла в лесу {mushroom} гриб{variable3}'))
+elif last_num == 1:
     print(f'Маша нашла в лесу {mushroom} гриб{variable}')
-elif last_num in range(2,5):
+elif last_num in range(2, 5):
     print(f'Маша нашла в лесу {mushroom} гриб{variable2}')
 else:
     print((f'Маша нашла в лесу {mushroom} гриб{variable3}'))
-
-
