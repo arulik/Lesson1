@@ -1,3 +1,4 @@
+'''
 print('*** Калькулятор ***')
 first_num = float(input('Введіть перше число : '))
 second_num = float(input('Введіть друге число: '))
@@ -22,7 +23,7 @@ number = int(input('Введіть число: '))
 for i in range(1, number):
     if i**2 < number:
         print(i**2, end=' ')
-print()
+
 
 print('\n*** Роспізнавання числа ***')
 number=float(input('Виберіть число: '))
@@ -32,7 +33,7 @@ elif number == 2:
     print('Просте число')
 else:
     print('Складене число')
-
+'''
 print('\n*** Задача про гриби ***')
 mushroom = int(input('Кількість грибів: '))
 last_num = int(mushroom) % 10
@@ -44,7 +45,7 @@ if last_num < 10 and exception == 11:
     print((f'Маша знайшла у лісі {mushroom} гриб{variable_else}'))
 elif last_num == 1:
     print(f'Маша знайшла у лісі {mushroom} гриб{variable_pass}')
-elif last_num in range(2, 5):
+elif mushroom < 5 and last_num in range(2, 5):
     print(f'Маша знайшла у лісі {mushroom} гриб{variable_range}')
 else:
     print((f'Маша знайшла у лісі {mushroom} гриб{variable_else}'))
