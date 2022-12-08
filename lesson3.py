@@ -23,7 +23,7 @@ number = int(input('Введіть число: '))
 for i in range(1, number):
     if i**2 < number:
         print(i**2, end=' ')
-'''
+
 
 number=float(input('Виберіть число: '))
 if number % 2 != 0:
@@ -33,6 +33,18 @@ elif number == 2:
 else:
     print('Складене число')
 
+'''
 
+mushroom = int(input('Кількість грибів: '))
+last_num = int(mushroom) % 10
+variable = (' ')
+variable2 = ('а')
+variable3 = ('ів')
+if last_num == 1:
+    print(f'Маша нашла в лесу {mushroom} гриб{variable}')
+elif last_num in range(2,5):
+    print(f'Маша нашла в лесу {mushroom} гриб{variable2}')
+else:
+    print((f'Маша нашла в лесу {mushroom} гриб{variable3}'))
 
 
