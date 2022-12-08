@@ -22,5 +22,6 @@ number = int(input('Input number: '))
 #    print(number**2, end=' ')
 
 for i in range(1, number):
-    print(i**2, end=' ')
+    if i**2 < number:
+        print(i**2, end=' ')
 print()
