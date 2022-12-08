@@ -24,4 +24,3 @@ number = int(input('Input number: '))
 for i in range(1, number):
     if i**2 < number:
         print(i**2, end=' ')
-print()
