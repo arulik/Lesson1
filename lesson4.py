@@ -14,21 +14,18 @@
 #     for j in my_string:
 #         print(int(i+j))
 
-# if w % 2 == 0:
-#     str1 += ('  ')
-# else:
-#     str1 += ('*')
 
 
-n = 7 * 2
+
+n = 5 * 2
 for h in range(0, n, 2):
     str1 = ''
     for w in range((n * 2) * 2):
         if h == n-2:
-            if w % 2 == 0:
-             str1 += ('  *')
-            else:
-             str1 += ('')
+            if w == 0 and w <= n-2:
+                str1 += ('  *')
+            elif w <= n-2:
+                str1 += (' *')
         elif n - h == w or n + h == w:
             str1 += ('*')
         else:
