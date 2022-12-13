@@ -25,7 +25,7 @@ for h in range(0, n, 2):
     str1 = ''
     for w in range((n * 2) * 2):
         if h == n-2:
-            print('*')
+            print(' ')
         elif n - h == w or n + h == w:
             str1 += ('*')
         else:
