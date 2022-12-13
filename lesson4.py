@@ -15,19 +15,19 @@
 #         print(int(i+j))
 
 
-
-
-n = 5 * 2
-for h in range(0, n, 2):
-    str1 = ''
-    for w in range((n * 2) * 2):
-        if h == n-2:
-            if w == 0 and w <= n-2:
-                str1 += ('  *')
-            elif w <= n-2:
-                str1 += (' *')
-        elif n - h == w or n + h == w:
-            str1 += ('*')
+print('\n\n*** Трикутник А ***')
+user_num=int(input('Введіть висоту трикутника: '))
+number = user_num * 2
+for height in range(0, number, 2):
+    string = ''
+    for weight in range((number * 2) * 2):
+        if height == number-2:
+            if weight == 0:
+                string += '  *'
+            elif weight <= number-2:
+                string += ' *'
+        elif number - height == weight or number + height == weight:
+            string += '*'
         else:
-            str1 += (' ')
-    print(str1)
+            string += ' '
+    print(string)
