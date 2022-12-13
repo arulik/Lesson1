@@ -24,14 +24,14 @@ for i in range(1, number):
         print(i**2, end=' ')
 
 
-print('\n*** Роспізнавання числа ***')
-number=float(input('Виберіть число: '))
-if number % 2 != 0:
-    print('Просте число')
-elif number == 2:
-    print('Просте число')
+number = int(input('Введіть Ваше число: '))
+for i in range(2, number // 2 + 1):
+    if number % i == 0:
+        print('Складене число')
+        break
 else:
-    print('Складене число')
+    print('Просте число')
+
 
 print('\n*** Задача про гриби ***')
 mushroom = int(input('Кількість грибів: '))
