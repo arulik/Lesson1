@@ -14,4 +14,4 @@ for i in my_string:
     for j in my_string:
         print(int(i+j))
 
-test
+
