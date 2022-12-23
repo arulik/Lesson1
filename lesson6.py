@@ -13,18 +13,27 @@ print(my_list)
 print(my_list2)
 for i in my_list:
     my_results.append(i)
-    for j in my_list2:
-        my_results.append(j)
+for j in my_list2:
+    my_results.append(j)
 print(my_results)
 
 
 
 
 
-# my_str = str('hello world')
-# my_set = set(my_str)
-# my_list = (list(my_set))
-# my_results = []
-# for i in my_list:
-#     my_results.append(i)
-# print(my_results)
+my_str = str('hello world')
+my_set = set(my_str)
+my_list = (list(my_set))
+my_results = []
+for i in my_list:
+    my_results.append(i)
+print(my_results)
+
+#
+# a = "a14b6fh14"
+# chek = []
+# for alist in a:
+#    if alist in chek:
+#        print(alist ," not uniq")
+#    else:
+#        chek.append(alist)
