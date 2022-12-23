@@ -84,7 +84,24 @@ print(sub_str)
  содержит нечетное количество символов, пропущенный второй символ последней пары должен быть заменен
  подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_'](используйте срезы длинны 2)
 '''
+print('\n*** Задача 8 ***\n')
 
+lines = "absde"
+item = ""
+newlist = []
+for i in range(len(lines)):
+    if item == "":
+        item = lines[i]
+    else:
+        item += lines[i]
+        newlist.append(item)
+        item = ""
+
+if item != "":
+    item += "_"
+    newlist.append(item)
+
+print(newlist)
 
 
 
@@ -101,6 +118,7 @@ print(sub_str)
 '''*10. Дан список my_list в котором могут быть как строки (type str) так и целые числа (type int).
 Например [1, 2, 3, "11", "22", 33] Создать новый список в который поместить только строки из my_list
 '''
+
 print('\n*** Задача 10 ***\n')
 my_list = [1, 2, 3, "11", "22", 33]
 my_results = []
