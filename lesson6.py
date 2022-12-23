@@ -147,4 +147,5 @@ print('\n*** Задача 13 ***\n')
 str1 = "aaaasdf1"
 str2 = "asdfff2"
 my_set = set(str1 + str2)
-print(list(my_set))
+my_list = list(my_set)
+print(my_list)
