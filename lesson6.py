@@ -11,23 +11,23 @@ my_list2 = [randint(1, 500) for i in range(10)]
 my_results= []
 print(my_list)
 print(my_list2)
-for i in my_list:
-    my_results.append(i)
-for j in my_list2:
-    my_results.append(j)
+for i in range(0,len(my_list)):
+    my_results.append(my_list[i])
+    my_results.append(my_list2[i])
 print(my_results)
 
 
 
 
 
-my_str = str('hello world')
-my_set = set(my_str)
-my_list = (list(my_set))
-my_results = []
-for i in my_list:
-    my_results.append(i)
-print(my_results)
+
+# my_str = str('hello world')
+# my_set = set(my_str)
+# my_list = (list(my_set))
+# my_results = []
+# for i in my_list:
+#     my_results.append(i)
+# print(my_results)
 
 #
 # a = "a14b6fh14"
