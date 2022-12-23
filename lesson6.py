@@ -44,7 +44,13 @@ my_list_1, а потом все элементы на нечетных мест�
 my_str = '43 больше чем 34, но меньше чем 56'
 my_str=my_str.split()
 print(my_str)
+my_list=[]
 for i in my_str:
+    if i.isdigit():
+        my_list.append(i)
+
+print(my_list)
+
 
 
 
