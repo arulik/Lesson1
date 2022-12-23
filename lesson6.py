@@ -31,23 +31,11 @@ my_list_1, а потом все элементы на нечетных мест�
 Пересоздавать список нельзя! (используйте метод pop)
 '''
 
-# my_list = [randint(1, 500) for i in range(10)]
-# print(my_list)
-# len=len(my_list)
-# my_list.append(0)
-# my_list[len]=my_list[0]
-# my_list.pop(0)
-# print(my_list)
 
-# my_list = [randint(1, 500) for i in range(10)]
-# print(my_list)
-# len=len(my_list)
-# my_list.append(0)
-# my_list[len]=my_list[0]
-# my_list.pop(0)
-# for i in my_list:
-#     my_list.append(my_list.pop(0))
-# print(my_list)
+my_list = [randint(1, 500) for i in range(10)]
+print(my_list)
+my_list.append(my_list.pop(0))
+print(my_list)
 
 
 '''
@@ -86,6 +74,11 @@ print(s)
 '''*10. Дан список my_list в котором могут быть как строки (type str) так и целые числа (type int).
 Например [1, 2, 3, "11", "22", 33] Создать новый список в который поместить только строки из my_list
 '''
+
+# my_list=[1, 2, 3, "11", "22", 33]
+# for i in my_list:
+#     if i.isdigit()
+#         print()
 
 '''
 11. Дана строка my_str. Создать список в который поместить те символы из my_str, которые встречаются
