@@ -23,6 +23,6 @@ from random import randint
 my_str = str('hello world')
 my_set = set(my_str)
 my_list = (list(my_set))
-print(my_set)
+# print(my_set)
 for i in my_list:
-    print(i)
+    print(list(i), end='')
