@@ -45,3 +45,12 @@ for i in range(1,len(my_list)):
     new_list.append(my_list[i])
 new_list.append(my_list[0])
 print(new_list)
+'''
+*5. Дан список my_list. В ЭТОМ списке первый элемент переставить на последнее место.[1,2,3,4] -> [2,3,4,1].
+Пересоздавать список нельзя! (используйте метод pop)
+'''
+
+my_list = [randint(1, 500) for i in range(10)]
+my_list.pop()
+print(my_list)
+
