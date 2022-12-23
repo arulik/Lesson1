@@ -23,6 +23,8 @@ from random import randint
 my_str = str('hello world')
 my_set = set(my_str)
 my_list = (list(my_set))
+my_results = []
 # print(my_set)
 for i in my_list:
-    print(list(i), end='')
+    my_results.append(i)
+print(my_results)
