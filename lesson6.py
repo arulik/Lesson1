@@ -1,23 +1,11 @@
 from random import randint
 
 #
-'''
-3. Даны списки my_list_1 и my_list_2. Создать список my_result в который вначале поместить элементы на четных местах из
-my_list_1, а потом все элементы на нечетных местах из my_list_2.
-
-[randint(1, 500) for i in range(10)]
-'''
-# print('\n*** Задача 3 ***\n')
-# my_list = [1,2,3,4,5]
-# my_list2 = ['a','b','c','d','e']
-# my_results = []
-# print(my_list)
-# print(my_list2)
-# for i in range(0, len(my_list)):
+# '''
+# 3. Даны списки my_list_1 и my_list_2. Создать список my_result в который вначале поместить элементы на четных местах из
+# my_list_1, а потом все элементы на нечетных местах из my_list_2.
 #
-#     my_results.append(my_list[i])
-#     my_results.append(my_list2[i])
-# print(my_results)
+
 
 my_list_1 = [1, 2, 3, 4, 5, 6]
 my_list_2 = ['a', 'b', 'c', 'd', 'e', 'f']
