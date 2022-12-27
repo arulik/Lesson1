@@ -19,12 +19,13 @@ my_list_1, а потом все элементы на нечетных мест�
 #     my_results.append(my_list2[i])
 # print(my_results)
 
-my_list_1 = [1, 2, 3, 4, 5, 6, 7,8,9,11,12,14]
+my_list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 28]
 my_list_2 = ['a', 'b', 'c', 'd', 'e', 'f']
 my_result = []
 
-for i in (my_list_1):
-    if my_list_1.index(i) % 2 == 0:
+for i in range(0, len(my_list_1)):
+    print(i, my_list_1[i])
+    if i % 2 != 0:
         my_result.append(my_list_1[i])
     # elif my_list_2[i] % 2 == 0:
     #     my_result.append(my_list_2[i])
