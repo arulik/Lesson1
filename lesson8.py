@@ -14,7 +14,7 @@ peoples_list = [
     {"name": "Mary", "age": 16},
     {"name": "Nick", "age": 35},
     {"name": "John2", "age": 15},
- ]
+]
 #
 # min_age = 1110
 # for i in peoples_list:
@@ -29,12 +29,18 @@ peoples_list = [
 #         result_list.append(i['name'])
 # print(result_list)
 
-print('*** Задача 1.в ***')
-age = 0
-for i in peoples_list:
-    age += i['age']
-middle_age = age
-print(middle_age/len(peoples_list))
+# print('*** Задача 1.в ***')
+# age = 0
+# for i in peoples_list:
+#     age += i['age']
+# middle_age = age
+# print(middle_age/len(peoples_list))
+#
+# l = sum([i['age'] for i in peoples_list])
+# print(l/len(peoples_list))
 
-l = sum([i['age'] for i in peoples_list])
-print(l/len(peoples_list))
+print('*** Задача 1.b ***')
+
+# name=len([i['name']] for i in peoples_list)
+# print(name)
+print(sum(1 for name in peoples_list))
