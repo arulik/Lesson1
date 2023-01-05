@@ -41,26 +41,25 @@ peoples_list = [
 
 print('*** Задача 1.b ***')
 
+# result = []
+# total_result = []
+# for i in peoples_list:
+#     result.append(i['name'])
+# max_l = max(len(i) for i in result)
+# for i in result:
+#     if (len(i) == max_l):
+#         total_result.append(i)
+# print(total_result)
+
 result = []
+max_l = 0
 total_result = []
 for i in peoples_list:
     result.append(i['name'])
-max_l = max(len(i) for i in result)
+    if (len(i['name']) > max_l):
+        max_l = len(i['name'])
+
 for i in result:
     if (len(i) == max_l):
-        total_result.append(i)
-print(total_result)
-
-
-result = []
-max_l =0
-total_result = []
-for i in peoples_list:
-   result.append(i['name'])
-   if (len(i['name']) > maxl):
-        maxl = len(i['name'])
-
-for ni in result:
-    if (len(i) ==max_l):
         total_result.append(i)
 print(total_result)
