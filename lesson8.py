@@ -45,6 +45,66 @@ print('*** Задача 1.в ***')
 #     age += i['age']
 # middle_age = age
 # print(middle_age / len(peoples_list))
-
 l = sum([i['age'] for i in peoples_list])
 print(l / len(peoples_list))
+
+'''
+2)Даны два словаря my_dict_1 и my_dict_2.
+    а) Создать список из ключей, которые есть в обоих словарях.
+    б) Создать список из ключей, которые есть в первом, но нет во втором словаре.
+    в) Создать новый словарь из пар {ключ:значение}, для ключей, которые есть в первом, но нет во втором словаре.
+    г) Объединить эти два словаря в новый словарь по правилу:
+        если ключ есть только в одном из двух словарей - поместить пару ключ:значение,
+        если ключ есть в двух словарях -
+        поместить пару {ключ: [значение_из_первого_словаря, значение_из_второго_словаря]},
+        {1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
+'''
+
+my_dict_1 = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+}
+
+my_dict_2 = {
+    1: 2,
+    2: 1,
+    3: 3,
+    5: 4,
+}
+print('*** Задача 2.а ***')
+list1 = []
+for key in my_dict_1.keys():
+    if key in my_dict_2.keys():
+        list1.append(key)
+print(list1)
+
+print('*** Задача 2.б ***')
+
+list2 = []
+for key in my_dict_1.keys():
+    if key not in my_dict_2.keys():
+        list2.append(key)
+print(list2)
+
+print('*** Задача 2.в ***')
+new_dict = {}
+for key, value in my_dict_1.items():
+    if key not in my_dict_2:
+        new_dict.update({key: value})
+print(new_dict)
+
+print('*** Задача 2.г ***')
+
+new_dict = {}
+for key, value in my_dict_1.items():
+    if key not in my_dict_2:
+        new_dict.update({key: value})
+for key, value in my_dict_2.items():
+    if key not in my_dict_1:
+        new_dict.update({key: value})
+for key, value in my_dict_1.items():
+    if key in my_dict_2:
+        new_dict.update({key: [value, my_dict_2[value]]})
+print(new_dict)
