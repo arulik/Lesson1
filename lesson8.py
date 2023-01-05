@@ -8,7 +8,7 @@
 # '''
 # print('*** Задача 1.а ***')
 peoples_list = [
-    {"name": "John", "age": 15},
+    {"name": "John2", "age": 15},
     {"name": "Jack", "age": 45},
     {"name": "Any", "age": 24},
     {"name": "Mary", "age": 16},
@@ -42,15 +42,25 @@ peoples_list = [
 print('*** Задача 1.b ***')
 
 result = []
+total_result = []
 for i in peoples_list:
     result.append(i['name'])
-print(result)
-
 max_l = max(len(i) for i in result)
 for i in result:
     if (len(i) == max_l):
-        print(i)
+        total_result.append(i)
+print(total_result)
 
-max_l = max(len(i) for i in result)
-result_new = [i['name'] for i in result if len(i) == max_l]
-print(result_new)
+
+result = []
+max_l =0
+total_result = []
+for i in peoples_list:
+   result.append(i['name'])
+   if (len(i['name']) > maxl):
+        maxl = len(i['name'])
+
+for ni in result:
+    if (len(i) ==max_l):
+        total_result.append(i)
+print(total_result)
