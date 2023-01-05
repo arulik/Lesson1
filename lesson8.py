@@ -45,22 +45,23 @@ print('*** Задача 1.b ***')
 # print(name)
 # print(sum(1 for name in peoples_list))
 # name=min(len([i['name']]) for i in peoples_list)
-name=[]
-for i in peoples_list:
-    name += i['name']
-
-print(name)
+# name=[]
+# for i in peoples_list:
+#     name += i['name']
+#
+# print(name)
 
 
 
 result_list = []
 for i in peoples_list:
     result_list.append(i['name'])
-result_list = []
 # l = min([i['age'] for i in peoples_list])
 # result = [i['name'] for i in peoples_list if i['age'] == l]
 # print(result)
 # for i in peoples_list:
 #     if min_age == i['age']:
 #         result_list.append(i['name'])
+for i in result_list:
+    print(len(i),end=" ")
 print(result_list)
