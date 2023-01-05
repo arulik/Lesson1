@@ -6,7 +6,7 @@
 #     б) Создать список и поместить туда самое длинное имя. Если длина имени совпадает - поместить все такие имена.
 #     в) Посчитать среднее количество лет всех людей из начального списка.
 # '''
-# print('*** Задача 1.а ***')
+print('*** Задача 1.а ***')
 peoples_list = [
     {"name": "John", "age": 15},
     {"name": "Jack", "age": 45},
@@ -15,51 +15,36 @@ peoples_list = [
     {"name": "Nick", "age": 35},
     {"name": "John2", "age": 15},
 ]
-#
+
 # min_age = 1110
 # for i in peoples_list:
 #     if min_age > i['age']:
 #         min_age = i['age']
 # result_list = []
-# l = min([i['age'] for i in peoples_list])
-# result = [i['name'] for i in peoples_list if i['age'] == l]
-# print(result)
+l = min([i['age'] for i in peoples_list])
+result = [i['name'] for i in peoples_list if i['age'] == l]
+print(result)
 # for i in peoples_list:
 #     if min_age == i['age']:
 #         result_list.append(i['name'])
 # print(result_list)
 
-# print('*** Задача 1.в ***')
+print('*** Задача 1.б ***')
+
+new_list = []
+l_max = max([len(i['name']) for i in peoples_list])
+
+for i in peoples_list:
+    if len(i['name']) == l_max:
+        new_list.append(i['name'])
+print(new_list)
+
+print('*** Задача 1.в ***')
 # age = 0
 # for i in peoples_list:
 #     age += i['age']
 # middle_age = age
-# print(middle_age/len(peoples_list))
-#
-# l = sum([i['age'] for i in peoples_list])
-# print(l/len(peoples_list))
+# print(middle_age / len(peoples_list))
 
-print('*** Задача 1.b ***')
-
-# result = []
-# total_result = []
-# for i in peoples_list:
-#     result.append(i['name'])
-# max_l = max(len(i) for i in result)
-# for i in result:
-#     if (len(i) == max_l):
-#         total_result.append(i)
-# print(total_result)
-
-result = []
-max_l = 0
-total_result = []
-for i in peoples_list:
-    result.append(i['name'])
-    if (len(i['name']) > max_l):
-        max_l = len(i['name'])
-
-for i in result:
-    if (len(i) == max_l):
-        total_result.append(i)
-print(total_result)
+l = sum([i['age'] for i in peoples_list])
+print(l / len(peoples_list))
