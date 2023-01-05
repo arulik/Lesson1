@@ -8,7 +8,7 @@
 # '''
 # print('*** Задача 1.а ***')
 peoples_list = [
-    {"name": "John2", "age": 15},
+    {"name": "John", "age": 15},
     {"name": "Jack", "age": 45},
     {"name": "Any", "age": 24},
     {"name": "Mary", "age": 16},
