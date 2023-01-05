@@ -98,13 +98,12 @@ print(new_dict)
 print('*** Задача 2.г ***')
 
 new_dict = {}
+
 for key, value in my_dict_1.items():
-    if key not in my_dict_2:
-        new_dict.update({key: value})
+    new_dict.update({key: value})
 for key, value in my_dict_2.items():
-    if key not in my_dict_1:
-        new_dict.update({key: value})
-for key, value in my_dict_1.items():
-    if key in my_dict_2:
-        new_dict.update({key: [value, my_dict_2[value]]})
+    if key in new_dict:
+        new_dict.update({key: [my_dict_1[key], value]})
+    else:
+        new_dict.update({key:value})
 print(new_dict)
