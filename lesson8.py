@@ -34,7 +34,7 @@ age = 0
 for i in peoples_list:
     age += i['age']
 middle_age = age
-print(middle_age)
+print(middle_age/len(peoples_list))
 
 l = sum([i['age'] for i in peoples_list])
-print(l)
+print(l/len(peoples_list))
