@@ -105,6 +105,5 @@ for key, value in my_dict_2.items():
     if key in new_dict:
         new_dict.update({key: [my_dict_1[key], value]})
     else:
-        new_dict.update({key:value})
+        new_dict.update({key: value})
 print(new_dict)
-
