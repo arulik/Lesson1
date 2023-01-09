@@ -8,6 +8,3 @@ my_str = 'abcdefghaabcz'
 
 my_str_2 = 'abcdeez'
 
-print(func_one_letter(my_str))
-print(func_one_letter(my_str_2))
-print(func_one_time_str_one_letter(my_str, my_str_2))
