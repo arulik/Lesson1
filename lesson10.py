@@ -9,9 +9,8 @@ my_str = 'abcdefghaabc'
 my_str_2 = 'abcde'
 
 my_result = []
-    for i in my_str:
-        for j in my_str_2:
-            if i == j:
-                my_result.append(i)
-    return my_result
-
+for i in my_str:
+    for j in my_str_2:
+        if i == j:
+            my_result.append(i)
+print(my_result)
