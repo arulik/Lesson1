@@ -4,13 +4,10 @@ my_list = ['thomas', 'andrew', 'kris', 'antony']
 
 my_list_int_str = ['thomas', 'andrew', 'kris', 'antony', 20, 10, 5]
 
-my_str = 'abcdefghaabc'
+my_str = 'abcdefghaabcz'
 
-my_str_2 = 'abcde'
+my_str_2 = 'abcdeez'
 
-my_result = []
-for i in my_str:
-    for j in my_str_2:
-        if i == j:
-            my_result.append(i)
-print(my_result)
+print(func_one_letter(my_str))
+print(func_one_letter(my_str_2))
+print(func_one_time_str_one_letter(my_str, my_str_2))

@@ -39,7 +39,7 @@ def func_if_is_str(my_list_int_str):
 
 
 def func_one_letter(my_str):
-    ''' Вести всі унікальні елементи із строки'''
+    ''' Вивести всі унікальні елементи із строки'''
     my_result = []
     for i in range(len(my_str)):
         if my_str.count(my_str[i]) == 1:
@@ -55,3 +55,11 @@ def func_one_time_str(my_str, my_str_2):
             if i == j:
                 my_result.append(i)
     return my_result
+
+def func_one_time_str_one_letter(my_str, my_str_2):
+    ''' Вивести символи які є в обох строках але тільки по 1му разу'''
+    return func_one_time_str(func_one_letter(my_str),func_one_letter(my_str_2))
+
+
+
+
