@@ -1,5 +1,5 @@
 def func_list_reverse(my_list):
-    ''' перевертає строку по індексу '''
+    ''' 1) перевертає строку по індексу '''
     my_result = []
     for i in range(0, len(my_list)):
         if i % 2 != 0:
@@ -10,7 +10,7 @@ def func_list_reverse(my_list):
 
 
 def func_letter_a_first(my_list):
-    ''' Повертає елементи в яких перша буква а'''
+    ''' 2) Повертає елементи в яких перша буква а'''
     letter = 'a'
     my_result = []
     for word in my_list:
@@ -20,7 +20,7 @@ def func_letter_a_first(my_list):
 
 
 def func_if_letter_in(my_list):
-    ''' Якщо є літера 'а' в списку'''
+    '''3) Якщо є літера 'а' в списку'''
     letter = 'a'
     my_result = []
     for word in my_list:
@@ -30,7 +30,7 @@ def func_if_letter_in(my_list):
 
 
 def func_if_is_str(my_list_int_str):
-    ''' Якщо тип елементу == str вивести цей елемент в новий список'''
+    '''4) Якщо тип елементу == str вивести цей елемент в новий список'''
     my_result = []
     for word in my_list_int_str:
         if type(word) is str:
@@ -39,7 +39,7 @@ def func_if_is_str(my_list_int_str):
 
 
 def func_one_letter(my_str):
-    ''' Вивести всі унікальні елементи із строки'''
+    '''5) Вивести всі унікальні елементи із строки'''
     my_result = []
     for i in range(len(my_str)):
         if my_str.count(my_str[i]) == 1:
@@ -48,7 +48,7 @@ def func_one_letter(my_str):
 
 
 def func_one_time_str(my_str, my_str_2):
-    '''Вивести елементи 2х строк які зустрічаються хоча б один раз'''
+    '''6) Вивести елементи 2х строк які зустрічаються хоча б один раз'''
     my_result = []
     for i in my_str:
         for j in my_str_2:
@@ -56,10 +56,7 @@ def func_one_time_str(my_str, my_str_2):
                 my_result.append(i)
     return my_result
 
+
 def func_one_time_str_one_letter(my_str, my_str_2):
-    ''' Вивести символи які є в обох строках але тільки по 1му разу'''
-    return func_one_time_str(func_one_letter(my_str),func_one_letter(my_str_2))
-
-
-
-
+    '''7) Вивести символи які є в обох строках але тільки по 1му разу'''
+    return func_one_time_str(func_one_letter(my_str), func_one_letter(my_str_2))
