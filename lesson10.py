@@ -1,11 +1,9 @@
-from dz_functions_module import func_list_reverse
-my_list = ['Thomas', 'Andrew', 'Kris', 'Antony']
+from dz_functions_module import *
 
 
+my_list = ['thomas', 'andrew', 'kris', 'antony']
 
-letter = 'a'
-my_result = []
-for word in my_list:
-    if letter in word:
-        my_result.append(word)
-print(my_result)
+my_list_int_str = ['thomas', 'andrew', 'kris', 'antony', 20, 10, 5]
+
+my_str = 'abcdefghaabc'
+
