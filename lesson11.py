@@ -13,3 +13,4 @@ def censore(filename, list):
 
 list = ['bob', 'russian', 'putin']
 censore("c:/temp/lesson11.txt", list)
+
