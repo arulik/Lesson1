@@ -11,5 +11,5 @@ def censore(filename, list):
         file.write(result)
 
 
-list = ['tist', 'tost', 'test']
+list = ['bob', 'russian', 'putin']
 censore("c:/temp/lesson11.txt", list)
