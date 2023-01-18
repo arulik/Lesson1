@@ -34,6 +34,11 @@ class employee:
         self.lastname = lastname
         self.age = age
 
+    def __init__(self, file_json):
+        filename = self.file_json
+        with open()
+
+
     def write_card_json_employer(self):
         data = {}
         data['firstname'] = self.firstname
