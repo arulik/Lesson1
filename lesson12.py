@@ -33,7 +33,7 @@ def censore(filename, list):
 
 def write_stat_json(filename: str, list):
     '''
-     Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі, файл дописується
+     Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі в json, файл дописується
      а не перезаписує дані.
     :param filename:
     :param list:
@@ -64,7 +64,7 @@ def write_stat_json(filename: str, list):
 
 def write_stat_csv(filename: str, list):
     '''
-     Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі, файл дописується
+     Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі в csv, файл дописується
      а не перезаписує дані.
     :param filename:
     :param list:
@@ -86,18 +86,11 @@ def write_stat_csv(filename: str, list):
     filedata['censored words'] = result
     filedata['filename'] = filename
     filename = "stat.json"
-    with open('stat.csv', 'rt') as file:
-        reader = csv.DictReader(file, delimiter=';')
-    print(reader.)
-    # with open('stat.csv', 'a') as file:
-    #     writer = csv.DictWriter(file, fieldnames=filedata.keys(), delimiter=';')
-    #     writer.writeheader()
-    #     writer.writerow(filedata)
-    # with open('stat.json', "r") as file:
-    #     data = json.load(file)
-    # data.append(filedata)
-    # with open('stat.json', "w") as file:
-    #     json.dump(data, file)
+    with open('stat.csv', 'a') as file:
+        writer = csv.DictWriter(file, fieldnames=filedata.keys(), delimiter=';')
+        writer.writeheader()
+        writer.writerow(filedata)
+
 
 
 def clear_sym(text):
