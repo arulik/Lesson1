@@ -51,13 +51,13 @@ def write_stat(filename: str, list):
             else:
                 result[word] += 1
 
-    filedata['word'] = result
-    filedata['filename'] = 'filename'
+    filedata['censored words'] = result
+    filedata['filename'] = filename
     filename = "stat.json"
-    with open(filename, "r") as file:
+    with open('stat.json', "r") as file:
         data = json.load(file)
     data.append(filedata)
-    with open(filename, "w") as file:
+    with open('stat.json', "w") as file:
         json.dump(data, file)
 
 def clear_sym(text):
@@ -73,3 +73,5 @@ def clear_sym(text):
 
 list = ['bob', 'russian', 'putin', 'test', 'tost']
 censore("c:/temp/lesson11.txt", list)
+write_stat("c:/temp/lesson11.txt", list)
+
