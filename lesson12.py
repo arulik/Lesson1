@@ -9,6 +9,7 @@
  название файла, список слов, сколько раз каждое слово встретилось в тесте.
 '''
 import json
+import csv
 
 
 def censore(filename, list):
@@ -30,7 +31,7 @@ def censore(filename, list):
         file.write(result)
 
 
-def write_stat(filename: str, list):
+def write_stat_json(filename: str, list):
     '''
      Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі, файл дописується
      а не перезаписує дані.
@@ -60,6 +61,45 @@ def write_stat(filename: str, list):
     with open('stat.json', "w") as file:
         json.dump(data, file)
 
+
+def write_stat_csv(filename: str, list):
+    '''
+     Записує назву файла та кількість слів із списку які були знайдені і замінені в файлі, файл дописується
+     а не перезаписує дані.
+    :param filename:
+    :param list:
+    :return:
+    '''
+    with open(filename, 'r') as file:
+        text = file.read()
+    result = {}
+    text = clear_sym(text)
+    new = []
+    filedata = {}
+    for word in text.split():
+        if word in list:
+            if word not in result:
+                result[word] = 1
+            else:
+                result[word] += 1
+
+    filedata['censored words'] = result
+    filedata['filename'] = filename
+    filename = "stat.json"
+    with open('stat.csv', 'rt') as file:
+        reader = csv.DictReader(file, delimiter=';')
+    print(reader.)
+    # with open('stat.csv', 'a') as file:
+    #     writer = csv.DictWriter(file, fieldnames=filedata.keys(), delimiter=';')
+    #     writer.writeheader()
+    #     writer.writerow(filedata)
+    # with open('stat.json', "r") as file:
+    #     data = json.load(file)
+    # data.append(filedata)
+    # with open('stat.json', "w") as file:
+    #     json.dump(data, file)
+
+
 def clear_sym(text):
     '''
     Видаляє лтшні елементи із тексту для зручного читання файлу
@@ -71,7 +111,8 @@ def clear_sym(text):
         text = text.replace(i, ' ')
     return text
 
+
 list = ['bob', 'russian', 'putin', 'test', 'tost']
 censore("c:/temp/lesson11.txt", list)
-write_stat("c:/temp/lesson11.txt", list)
-
+# write_stat("c:/temp/lesson11.txt", list)
+write_stat_csv("c:/temp/lesson11.txt", list)
