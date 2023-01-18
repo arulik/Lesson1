@@ -59,8 +59,7 @@ class employee:
         else:
             return False
 
-# test = employee()
-# test.write_card_json_employer()
+
 new_emp = employee('Ivan', 'Sidorov', 25)
 new_emp.set_email('test@test.com.ua')
 new_emp.skills(['something', 'something2'])
