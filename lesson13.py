@@ -79,7 +79,6 @@ class employee:
             writer.writeheader()
             writer.writerow(data)
 
-
     def create_card_employer(self):
         '''
         Фунуція обёєднує всі властивості співробітника в 1 словник(для зручності)
@@ -158,15 +157,32 @@ class employee:
                 list_emp.append(emp)
         return list_emp
 
+    def get_object_from_file(self, filename):
+        '''
+        Додавання об`єкта з файлу
+        :return:
+        '''
+        with open(filename, "r", encoding='utf8') as file:
+            data = json.load(file)
+        self.firstname = data['firstname']
+        self.lastname = data['lastname']
+        self.age = data['age']
+        self.email = data['email']
+        self.skills = data['skills']
+        self.people_lang = data['people_lang']
+        self.coding_lang = data['coding_lang']
+        return data
+
 
 new_emp = employee()
-new_emp.set_email('test@test.com.ua')
-new_emp.skills(['something', 'something2'])
-new_emp.write_card_json_employer()
-# print(new_emp.check_skills('something'))
-new_emp.create_card_employer()
-new_emp.add_employee_to_list()
-# print(new_emp.search_employee_by_name_firstname('Ivasik', 'Telesik'))
-for name in new_emp.get_list_employee():
-    print(name)
-new_emp.write_card_csv_employer()
+# new_emp.set_email('test@test.com.ua')
+# new_emp.skills(['something', 'something2'])
+# new_emp.write_card_json_employer()
+# # print(new_emp.check_skills('something'))
+# new_emp.create_card_employer()
+# new_emp.add_employee_to_list()
+# # print(new_emp.search_employee_by_name_firstname('Ivasik', 'Telesik'))
+# for name in new_emp.get_list_employee():
+#     print(name)
+# new_emp.write_card_csv_employer()
+print(new_emp.get_object_from_file('Ivasik Telesik.json'))
