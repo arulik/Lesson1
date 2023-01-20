@@ -34,9 +34,6 @@ class employee:
         self.lastname = lastname
         self.age = age
 
-    def __init__(self, file_json):
-        filename = self.file_json
-        with open()
 
 
     def write_card_json_employer(self):
@@ -64,9 +61,31 @@ class employee:
         else:
             return False
 
+    def get_list_employee(self):
+        filename = "list_employee.json"
+        with open(filename, "r", encoding='utf8') as file:
+            data = json.load(file)
+        return data
+
+    def add_employee_to_list(self):
+        data = self.get_list_employee()
+        data.append(self.card_eployee)
+        with open("list_employee.json", "w", encoding='utf8') as file:
+            json.dump(data, file, ensure_ascii=False)
+
+    def serach_employee_by_name(self, name):
+        list_emp = []
+        for emp in self.get_list_employee():
+            if name == emp['firstname']:
+                list_emp.append(emp)
+        return list_emp
+
+
+
 
 new_emp = employee('Ivan', 'Sidorov', 25)
 new_emp.set_email('test@test.com.ua')
 new_emp.skills(['something', 'something2'])
 new_emp.write_card_json_employer()
 print(new_emp.check_skills('something'))
+
