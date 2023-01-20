@@ -102,7 +102,7 @@ class employee:
         '''
         self.email = email
 
-    def skills(self, skills_list):
+    def set_skills(self, skills_list):
         '''
         Задати вміння
         :param skills_list:
@@ -144,6 +144,19 @@ class employee:
             with open("list_employee.json", "w", encoding='utf8') as file:
                 json.dump(data, file, ensure_ascii=False)
 
+    def del_employee_to_list(self):
+        '''
+        Видалити співробітника зі списку співробітників
+        :return:
+        '''
+        new_list = []
+        data = self.get_list_employee()
+        for emp in range(len(data)):
+            if self.firstname != data[emp]['firstname'] and self.lastname != data[emp]['lastname']:
+                new_list.append(data[emp])
+        with open("list_employee.json", "w", encoding='utf8') as file:
+            json.dump(new_list, file, ensure_ascii=False)
+
     def search_employee_by_name_firstname(self, name, lastname):
         '''
         Знайти співробітника по імені та фамілії в списку співробітників
@@ -176,13 +189,23 @@ class employee:
 
 new_emp = employee()
 # new_emp.set_email('test@test.com.ua')
-# new_emp.skills(['something', 'something2'])
+# new_emp.set_skills(['something', 'something2'])
 # new_emp.write_card_json_employer()
 # # print(new_emp.check_skills('something'))
-# new_emp.create_card_employer()
+
 # new_emp.add_employee_to_list()
 # # print(new_emp.search_employee_by_name_firstname('Ivasik', 'Telesik'))
 # for name in new_emp.get_list_employee():
 #     print(name)
 # new_emp.write_card_csv_employer()
-print(new_emp.get_object_from_file('Ivasik Telesik.json'))
+# print(new_emp.get_object_from_file('Ivasik Telesik.json'))
+
+
+# new_emp.set_emloyee('test', 'test', 21)
+# new_emp.create_card_employer()
+# new_emp.add_employee_to_list()
+new_emp.set_emloyee('tost', 'tost', 22)
+# new_emp.create_card_employer()
+# new_emp.add_employee_to_list()
+new_emp.del_employee_to_list()
+print(new_emp.get_list_employee())
