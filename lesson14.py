@@ -25,16 +25,30 @@ import os
 
 
 class directory:
-    directory_name = 'name'
+    dirname = ''
     dict = {}
 
-    def create_dict_list(self, dir):
+    def __init__(self, dirname: str = 'dir'):
+        """
+        присвоєння об`єкта = за замовчуванням це папка dir
+        :param dirname:
+        """
+        self.dirname = dirname
+
+    def __str__(self):
+        '''
+        Вивід результату
+        :return:
+        '''
+        return f'{self.dict}'
+
+    def create_dict_list(self):
         '''
         Сворення словника з спиками файлів та папок в директорії
         :param dir:
         :return:
         '''
-        dir_path = dir
+        dir_path = self.dirname
         files = []
         dirs = []
         for (dir_path, dir_names, file_names) in os.walk(dir_path):
@@ -44,10 +58,45 @@ class directory:
         self.dict['dirnames'] = dirs
         return self.dict
 
+    def sort(self, type_sort=True):
+        '''
+        Функція сортування, True - сортування за алфавітом, False - реверс, вивід новий словник з
+        відсортованними данними
+        :param type_sort:
+        :return:
+        '''
+        new_dict = {}
+        if type_sort:
+            new_dict['filenames'] = sorted(self.dict['filenames'], reverse=False)
+            new_dict['dirnames'] = sorted(self.dict['dirnames'], reverse=False)
+            return new_dict
+        else:
+            new_dict['filenames'] = sorted(self.dict['filenames'], reverse=True)
+            new_dict['dirnames'] = sorted(self.dict['dirnames'], reverse=True)
+            return new_dict
+
+    def check_if_dir_or_file(self, string: str):
+        '''
+        Додавання файлів/папок в словник
+        :param string:
+        :return:
+        '''
+        if '.' in string:
+            self.dict['filenames'].append(string)
+            return self.dict
+        else:
+            self.dict['dirnames'].append(string)
+            return self.dict
 
 
 new_dir = directory()
-print(new_dir.create_dict_list('dir'))
+new_dir.create_dict_list()
+# print(new_dir.check_if_dir_or_file('m'))
+print(new_dir)
+# # print(new_dir.sort(False))
+# print(new_dir.sort(True))
+# print(new_dir)
+
 #
 # dir_path = r'dir'
 # res = []
@@ -55,6 +104,5 @@ print(new_dir.create_dict_list('dir'))
 #     print(dir_path)
 #     res.extend(file_names)
 # print(res)
-##
-##
-
+# dir_path = dir
+# print(dir_path)
