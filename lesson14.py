@@ -97,12 +97,3 @@ print(new_dir)
 # print(new_dir.sort(True))
 # print(new_dir)
 
-#
-# dir_path = r'dir'
-# res = []
-# for (dir_path, dir_names, file_names) in os.walk(dir_path):
-#     print(dir_path)
-#     res.extend(file_names)
-# print(res)
-# dir_path = dir
-# print(dir_path)
