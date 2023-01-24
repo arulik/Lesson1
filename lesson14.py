@@ -58,7 +58,7 @@ class directory:
         self.dict['dirnames'] = dirs
         return self.dict
 
-    def sort(self, type_sort=True):
+    def sort_dir_file(self, type_sort=True):
         '''
         Функція сортування, True - сортування за алфавітом, False - реверс, вивід новий словник з
         відсортованними данними
@@ -93,7 +93,8 @@ new_dir = directory()
 new_dir.create_dict_list()
 # print(new_dir.check_if_dir_or_file('m'))
 print(new_dir)
+new_dir.sort()
 # # print(new_dir.sort(False))
-# print(new_dir.sort(True))
+print(new_dir(True))
 # print(new_dir)
 
