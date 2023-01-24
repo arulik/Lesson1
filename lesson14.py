@@ -65,15 +65,14 @@ class directory:
         :param type_sort:
         :return:
         '''
-        new_dict = {}
         if type_sort:
-            new_dict['filenames'] = sorted(self.dict['filenames'], reverse=False)
-            new_dict['dirnames'] = sorted(self.dict['dirnames'], reverse=False)
-            return new_dict
+            self.dict['filenames'] = sorted(self.dict['filenames'], reverse=False)
+            self.dict['dirnames'] = sorted(self.dict['dirnames'], reverse=False)
+            return self.dict
         else:
-            new_dict['filenames'] = sorted(self.dict['filenames'], reverse=True)
-            new_dict['dirnames'] = sorted(self.dict['dirnames'], reverse=True)
-            return new_dict
+            self.dict['filenames'] = sorted(self.dict['filenames'], reverse=True)
+            self.dict['dirnames'] = sorted(self.dict['dirnames'], reverse=True)
+            return self.dict
 
     def check_if_dir_or_file(self, string: str):
         '''
@@ -91,10 +90,11 @@ class directory:
 
 new_dir = directory()
 new_dir.create_dict_list()
-# print(new_dir.check_if_dir_or_file('m'))
 print(new_dir)
-new_dir.sort()
-# # print(new_dir.sort(False))
-print(new_dir(True))
-# print(new_dir)
+new_dir.sort_dir_file(False)
 
+print(new_dir)
+
+new_dir.check_if_dir_or_file('file.txt')
+new_dir.check_if_dir_or_file('folder')
+print(new_dir)
