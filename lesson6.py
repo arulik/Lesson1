@@ -47,26 +47,26 @@ print(my_list)
 # Найти сумму ВСЕХ ЧИСЕЛ (А НЕ ЦИФР) в этой строке. Для данного примера ответ - 133.
 # '''
 
-# string = '43 больше чем 34, но меньше чем 56'
-# len = len(string)
-# list = []
-# i = 0
-# while i < len:
-#     string_int = ''
-#     a = string[i]
-#     while '0' <= a <= '9':
-#         string_int += a
-#         i += 1
-#         if i < len:
-#             a = string[i]
-#         else:
-#             break
-#     i += 1
-#     if string_int != '':
-#         list.append(int(string_int))
-# list = str(list)
-#
-# print(list)
+string = '43 больше чем 34, но меньше чем 56'
+len = len(string)
+list = []
+i = 0
+while i < len:
+    string_int = ''
+    a = string[i]
+    while '0' <= a <= '9':
+        string_int += a
+        i += 1
+        if i < len:
+            a = string[i]
+        else:
+            break
+    i += 1
+    if string_int != '':
+        list.append(int(string_int))
+list = str(list)
+
+print(list)
 
 #
 #
