@@ -67,6 +67,7 @@ class Bus(Auto):
     def __str__(self):
         return (f'Кількість пасажирів {self.passengers}\n{super().__str__()}')
 
+
 class Truck(Auto):
 
     def __init__(self, wheels, speed, number, hp, tonnage):
@@ -85,14 +86,43 @@ class Truck(Auto):
         return (f'Тонаж - {self.__tonnage} тон\n{super().__str__()}')
 
 
+class Bicycle(Transport):
+
+    def __init__(self, wheels, speed, weight):
+        super().__init__(wheels, speed)
+        self.__weight = weight
+
+    @property
+    def weight(self):
+        return self.weight
+
+    @weight.setter
+    def weight(self, weight):
+        self.__weight = weight
+
+    def __str__(self):
+        return (f'Вага - {self.__weight} кг.\n{super().__str__()}')
 
 
+class Motorbike(Bicycle):
+    def __init__(self, wheels, speed, weight, volume):
+        super().__init__(wheels, speed, weight)
+        self.__volume = volume
 
+    @property
+    def volume(self):
+        return self.volume
 
+    @volume.setter
+    def weight(self, volume):
+        self.__volume = volume
+
+    def __str__(self):
+        return (f'Потужність двигуна- {self.__volume} квт\n{super().__str__()}')
 
 
 # bus = Transport(2, 4)
 # bicycle = Bicycle(1, 2, 3, 5)
 # print(bicycle)
-bus = Truck(1,2,3,4,5)
+bus = Motorbike(1, 2, 3,5)
 print(bus)
